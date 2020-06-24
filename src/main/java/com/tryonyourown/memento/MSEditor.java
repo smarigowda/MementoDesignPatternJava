@@ -37,7 +37,7 @@ public class MSEditor implements   Editor {
 
     public void save() {
         EditorState editorState = new EditorState(content, fontSize, fontName);
-        history.push(editorState);
+        history.push((State) editorState);
     }
     public void restore() {
         EditorState editorState = (EditorState) history.pop();
